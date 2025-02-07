@@ -721,6 +721,13 @@ glPopMatrix();
         glVertex2f(-1.30, -11.50);
         glEnd();
 
+
+///Text
+         glColor3f(1.0f, 1.0f, 0.4f);
+        renderBitmapString(-4.50f, 16.0f, GLUT_BITMAP_HELVETICA_12, "Play , Learn And Fun- Primary to SSC");
+        renderBitmapString(-3.0f, 13.0f, GLUT_BITMAP_HELVETICA_18, "Rain rain go away...");
+        renderBitmapString(-5.0f, 10.0f, GLUT_BITMAP_HELVETICA_12, "Bangla, English, Math, BGS, Islam, Science");
+
     ///Faculty
     glPushMatrix();
     glTranslatef(moveF1, 0.0f, 0.0f);
@@ -772,7 +779,6 @@ glPopMatrix();
         drawCircle(-11.50, 11.50,0.40,100);
         glEnd();
     glPopMatrix();
-
 
 
 glutSwapBuffers();
@@ -829,7 +835,7 @@ void updateF1(int value) {
     }
 
     glutPostRedisplay();
-    glutTimerFunc(40, updateF1, 0);  // Keep the animation going
+    glutTimerFunc(40, updateF1, 0);
 }
 
 
@@ -853,7 +859,9 @@ int main(int argc, char** argv) {
 
     glutDisplayFunc(renderScene);
 
-    sndPlaySound("kids-in-classroom.wav", SND_ASYNC);
+    sndPlaySound("classroom-college.wav", SND_ASYNC);
+    //  sndPlaySound("kids-in-classroom.wav", SND_ASYNC);
+
 
     glutMainLoop();
     return 0;
